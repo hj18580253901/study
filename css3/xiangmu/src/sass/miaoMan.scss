@@ -1,0 +1,475 @@
+
+.main{
+	width:100%;
+	height:100%;
+	overflow:hidden;
+	background:#000;
+}
+.navPath{
+	width:170px;
+	height:100%;
+	position:fixed;
+	top:0;
+	left:0;
+	z-index:1000;
+	background:#222;
+	transition:all 1s ;
+	transform:translate3d(-100%,0,0);
+	//visibility:hidden;//visible
+	.navMen{
+		margin-top:30px;
+		 //a{
+		// 	cursor:pointer;
+			span{
+				cursor:pointer;
+				width:100%;
+				height:28px;
+				cursor:pointer;
+				line-height:28px;
+				display:block;
+				text-align: center;
+				font-size: 11px;
+	    		font-family: Georgia,"Times New Roman",Times,serif;
+	    		letter-spacing: 4px;
+	    		color:#fff;
+	    		background:url(../images/miaoman/menu.png) no-repeat;
+	    		transition:all 1s ;
+			}
+			.nav_home{
+				background-position:-107px -3px;
+				&:hover{
+					background-position:30px -3px;	
+				}
+			}
+			// .home_act{
+			// 	background-position:-107px -3px;		
+			// }
+			.nav_team{
+				background-position:30px -25px;
+				&:hover{
+					background-position:-107px -25px;
+				}
+			}
+			// .team_act{
+			// 	background-position:-107px -25px;	
+			// }
+			.nav_about{
+				background-position:30px -47px;
+				&:hover{
+					background-position:-107px -47px;
+				}
+			}
+			// .about_act{
+			// 	background-position:-107px -47px;
+			// }
+			.nav_conta{
+				background-position:30px -69px;
+				&:hover{
+					background-position:-107px -69px;
+				}
+			}
+			.conta_act{
+				background-position:-107px -69px;
+			}
+			.nav_brand{
+				background-position:30px -91px;
+				&:hover{
+					background-position:-107px -91px;
+				}
+			}
+			.brand_act{
+				background-position:-107px -91px;
+			}
+			.xian{
+				width:25px;
+				height:2px;
+				background:#fff;
+				margin:14px auto;
+			}	
+		//}
+	}
+	.navBott{
+		width:100%;
+		position:absolute;
+		bottom:105px;
+		left:0;
+		color:#fff;
+		text-align:center;
+		font-size:14px;
+		color:#fff;
+		.winxin{
+			position:absolute;
+			bottom:53px;
+			left:15px;
+			opacity:0;
+			transition: opacity 1s;
+			&:hover{
+				opacity:1;
+			}
+		}
+		.telImg{
+			display:block;
+			margin:10px auto;
+			
+		}
+
+	}
+}
+.navAct{
+	transform:translate3d(0,0,0)
+}
+.main_con{
+	width:100%;
+	height:100%;
+	position:relative;
+	left:0;
+	transition:left 1s;
+	perspective: 1200px;
+
+	.menueBt{
+		width:50px;
+		height:50px;
+		background:#2c2c2c;
+		position:absolute;
+		top:14px;
+		left:14px;
+		z-index:100;
+		transition:all 0.5 ;
+		span{
+			display:block;
+			width:18px;
+			height:2px;
+			background:#fff;
+			position:absolute;
+			left:16px;
+			transition: all 1s;
+		}
+		.list1{
+			top:18px;
+		}
+		.list2{
+			top:25px;
+		}
+		.list3{
+			top:32px;
+		}
+		&:hover{
+			background:#fff;
+			span{
+				background:rgb(50,52,54);
+			}
+		}
+	}
+	.desigImg{
+		margin-left:18px;
+		position:absolute;
+		top:109px;
+		left:0;
+		z-index:10;
+	}
+	.memoryImg{
+		position: relative;
+	    top: 16px;
+	    right: 14px;
+	    z-index: 2;
+	    float: right;
+	    overflow: hidden;
+	    width: 455px;
+	    height: 32px;
+	}
+	.content{
+		width:100%;
+		height:100%;
+		position:absolute;
+		left:0;
+		display:none;
+		background:rgb(255, 255, 255);
+		z-index:20;
+		transform-style: preserve-3d;
+		transition: 1s transform;
+  	//transform:rotateX(0deg);
+    //transform-origin: top;
+
+	}
+	.ani_show{ animation: ani_show 0.7s linear forwards; }
+	.ani_hide{animation: ani_hide 0.6s linear forwards;}
+@keyframes ani_show {
+	 
+	0%{transform:rotateX(-180deg)}
+	100%{transform:rotateX(0)}
+}
+@keyframes ani_hide{
+	//transform-origin: bottom;
+	0%{transform:rotateX(0);}
+	100%{transform:rotateX(90deg);}
+}
+	
+	.banner{
+		width:100%;
+		height:100%;
+		position:relative;
+		.banPath{
+			li{
+				width:100%;
+				height:100%;
+				position:absolute;
+				text-align: center;
+				background-size:cover;
+				opacity:0;
+				img{
+					max-width:100%;
+					display:block;
+					position:absolute;
+					top:50%;
+					left:50%;
+					transform: translate(-50%, -50%);
+				}
+			}
+			.banOne{
+				background: rgb(255, 255, 255);
+			}
+			.banTwo{
+				background: rgb(212, 212, 212);
+			}
+			.banThree{
+				background-image:url(../images/miaoman/bbg2.jpg);
+
+			}
+			.banFour{
+				background:rgb(244, 243, 241);
+			}
+		}
+		.banSlide{
+			width:100%;
+			position:absolute;
+			bottom:150px;
+			text-align: center;
+			z-index:100;
+			li{
+				width:10px;
+				height:10px;
+				background: rgba(215,215,215,0.5);
+				display:inline-block;
+				border-radius:50%;
+			}
+			.on{
+				background:#d0416d;
+			}
+		}
+	}
+	// .jiantou{
+	// 	width:34px;
+	// 	height:36px;
+	// 	z-index:100;
+	// 	position:absolute;
+	// 	bottom:50px;
+	// 	left:50%;
+	// 	margin-left:-17px;
+	// 	transition: all 1s;
+	// 	.jiantou1,.jiantou2{
+	// 		position:absolute;
+	// 	}
+	// 	.jiantou1{
+	// 		top:0;
+	// 		animation:ani 2s infinite;
+	// 	}
+	// 	.jiantou2{
+	// 		top:15px;
+	// 		animation:ani 2s 1s infinite;
+	// 	}
+	// 	@keyframes ani{
+	// 		0%{transform: translateY(-30%);opacity:0;}
+	// 		70%{opacity:1;}
+	// 		100%{opacity:0;}
+	// 	}
+	// }
+	//team部分
+	
+	.team{
+		.top{
+			text-align: right;
+		}
+		width:100%;
+		box-sizing:border-box;
+		padding:15px;
+		
+		.team_bot{
+			width:100%;
+			position:relative;
+			.team_show{
+				width:25%;
+				height:auto;
+				box-sizing:border-box;
+				position:absolute;
+				top:0;
+				left:0;
+				overflow:hidden;
+				transition:all 1s;
+				&:hover .team_Inf{
+					background:rgb(209,65,109);
+					color:#fff;
+				}
+				.imgBox{
+					overflow:hidden;
+					img{
+						display:block;
+						width:100%;
+						transition:transform 1s;
+						transform:scale(1)
+					}
+				}
+				.team_Inf{
+					width:100%;
+					height:90px;
+					background:#f5f6f5 url(../images/miaoman/work_bg.gif) right no-repeat;
+					box-sizing:border-box;
+					padding:10px;
+					color:#666;
+					z-index:3;
+				h3{
+						font-size:12px;
+						padding-bottom:8px;
+						font-weight:normal;
+					}
+					h2{
+						font-size:16px;
+						text-transform: uppercase;
+						padding-bottom:5px;
+						font-weight:400;
+					}
+					p{
+						font-size:12px;
+					}
+				}
+			}
+		}
+	}
+	.about{
+		.total_top{
+		width:100%;
+		text-align:right;
+			.tab_tit{
+				margin-top:50px;
+				margin-left:18px;
+				text-align: left;
+				.bline{
+					width:195px;
+					display:inline-block;
+					border-bottom:1px solid #a1a1a1;
+					margin-left:15px;
+
+				}
+			}
+		}
+		.aboutCon{
+			width:100%;
+			height:100%;
+			padding-bottom:10px;
+			.about_tit{
+				text-align: center;
+				margin:10px 0 15px 0;
+				padding:10px 0;
+			}
+			.about_txt{
+				.abTxt_con{
+					text-align: center;
+					color:#a1a1a1;
+					font-size:14px;
+					margin-bottom:15px;
+				}
+			}
+			.about_poh{
+				text-align: center;
+				margin:20px 0;
+			}
+		}
+	}
+	.contact{
+		.total_top{
+			width:100%;
+			text-align:right;
+			.tab_tit{
+				margin-top:50px;
+				margin-left:18px;
+				text-align: left;
+			}
+			.bline{
+				width:195px;
+				display:inline-block;
+				border-bottom:1px solid #a1a1a1;
+				margin-left:15px;
+			}
+		}
+		.con_tit{
+				text-align: center;
+				margin:20px 0 15px 0;
+				padding:10px 0;
+		}
+		.con_poh{
+			text-align: center;
+			margin:30px 0;
+		}
+		.conTxt_con{
+			text-align: center;
+			color:#666;
+			font-size:14px;
+			margin-bottom:15px;
+			text-transform:uppercase;
+		}
+		.weinxin{
+			width:100%;
+			text-align:center;
+		}
+	}
+	.brand{
+		.total_top{
+			width:100%;
+			text-align:right;
+			.tab_tit{
+				margin-top:50px;
+				margin-left:18px;
+				text-align: left;
+			}
+			.bline{
+				width:195px;
+				display:inline-block;
+				border-bottom:1px solid #a1a1a1;
+				margin-left:15px;
+			}
+		}
+		.brand_tit{
+				text-align: center;
+				margin:20px 0 15px 0;
+				padding:10px 0;
+		}
+		.brTxt_con{
+			text-align: center;
+			color:#666;
+			font-size:14px;
+			margin-bottom:15px;
+			text-transform:uppercase;
+		}
+		.brand_list{
+			width:670px;
+			margin:0 auto;
+			li{
+				width:33.3%;
+				float:left;
+				text-align: center;
+			}
+		}
+		.clearfloat:after {
+	    clear: both;
+	    display: block;
+	    visibility: hidden;
+	    height: 0;
+	    content: "";
+		 }
+	}
+}
+	
+		
+	
+
+
+
