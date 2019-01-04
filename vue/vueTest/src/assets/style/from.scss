@@ -1,0 +1,85 @@
+.login-wrapper{
+  width:510px;
+  margin:40px auto;
+  background:#fff;
+  padding:10px 50px 40px;
+  border-radius:4px;
+  font-size:14px;
+  .login-title{
+    color:#333;
+    font-size:26px;
+    padding:30px 0;
+  }
+  .login-wran{
+    right:56px;
+    top:42px;
+    color:#999;
+    font-size:14px;
+    .special{
+      color:#1067d7;
+    }
+  }
+  .login-tabs{
+    padding:14px 0;
+    border-bottom:3px solid #d8d8d8;
+    .tabs-item{
+      width:49%;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    .tabs-bar{
+      width:50%;
+      height:3px;
+      background:#1067d7;
+      bottom:-3px;
+    }
+    .active{
+      color:#1067d7;
+    }
+  }
+  .login-type1, .login-type2{
+    margin-top:37px;
+    .from-group{
+      padding-bottom:34px;
+      .left-label{
+      width:50px;
+      font-size:14px;
+      color: #333333;
+      }
+      .right-input{
+        width:290px;
+        border-bottom:1px solid #bbb;
+        margin-left:40px;
+        .is-danger{
+          font-size: 14px;
+          color: #f44336;
+          line-height: 1;
+          left:0;
+          bottom:-100%;
+        }
+      }
+      .code{
+        width:150px;
+      }
+      .code-btn{
+        width:109px;
+        height:32px;
+        border:1px solid #1067d7;
+        color:#1067d7;
+        border-radius:36px;
+        line-height:32px;
+        text-align:center;
+        margin-left:30px;
+      }
+    }
+    .submit{
+      width:410px;
+      height:44px;
+      line-height:44px;
+      font-size:20px;
+      background:#1067d7;
+      color:#fff;
+      border-radius:22px;
+    }
+  }
+}
