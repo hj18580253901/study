@@ -1,0 +1,42 @@
+html{
+	font-family: "Helvetica Neue", Helvetica, STHeiTi, "Microsoft Yahei", Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+.clearfix:after{
+  content: '.';
+  display:block;
+  height:0;
+  clear:both;
+  visibility:hidden;
+}
+.t-c{
+	text-align:center;
+}
+.t-r{
+	text-align: right;
+}
+.ver-m{vertical-align: middle}
+.t-l{
+	text-align: left;
+}
+.dis-in-b{
+	display:inline-block;
+}
+.abs{
+	position:absolute;
+}
+.rel{
+	position:relative;
+}
+.inline-block{
+	display:inline-block;
+}
+.fl{
+	float:left;
+}
+.fr{
+	float:right;
+}
+.f-w{
+	font-weight:600;
+}
