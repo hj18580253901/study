@@ -20,7 +20,9 @@ export var anio = function () {
       return num
     }
   })
-  initBox()
+  elLeftArr.unshift(-(width + marginL))
+  console.log(elLeftArr)
+  initBox(3)
   $parent.addEventListener('touchstart', touch, false)
   $parent.addEventListener('touchend', touch, false)
 }
@@ -54,8 +56,8 @@ function touch (e) {
 }
 function lineUpLeft () {
   $box.forEach((item, index) => {
-    if (item.style.left === (-(width + marginL)) + 'px') {
-      item.style.cssText = 'left:' + elLeftArr[2] + 'px;transform:scale(1);opacity:0;'
+    if (item.style.left === elLeftArr[0] + 'px') {
+      item.style.cssText = 'left:' + elLeftArr[3] + 'px;transform:scale(1);opacity:0;'
     }
   })
   sortBoxL()
@@ -69,6 +71,11 @@ function lineUpLeft () {
   }, [])
 }
 function lineUpRight () {
+  $box.forEach((item, index) => {
+    if (item.style.left === elLeftArr[3] + 'px') {
+      item.style.cssText = 'left:' + elLeftArr[0] + 'px;transform:scale(1);opacity:0;'
+    }
+  })
   boxIndex = boxIndex.reduce((pre, item, index, arr) => {
     var n = index - 1
     if (n < 0) {
@@ -77,29 +84,24 @@ function lineUpRight () {
     pre.push(boxIndex[n])
     return pre
   }, [])
-  $box.forEach((item, index) => {
-    if (item.style.left === elLeftArr[2] + 'px') {
-      item.style.cssText = 'left:' + (-(width + marginL)) + 'px;transform:scale(1);opacity:0;'
-    }
-  })
   sortBoxR()
 }
-function initBox () {
+function initBox (i) {
   $box.forEach((item, index) => {
-    if (index <= 2) {
-      item.style.left = elLeftArr[index] + 'px'
+    if (index <= 1) {
+      item.style.left = elLeftArr[index + 1] + 'px'
     } else {
-      item.style.cssText = 'left:' + elLeftArr[2] + 'px;opacity:0;'
+      item.style.cssText = 'left:' + elLeftArr[i] + 'px;opacity:0;'
     }
   })
 }
 function sortBoxL () {
-  $box[boxIndex[0]].style.cssText = 'left:' + (-(width + marginL)) + 'px;transform:scale(1);opacity:0'
-  $box[boxIndex[1]].style.cssText = 'left:' + elLeftArr[0] + 'px;transform:scale(1.3);opacity:1'
-  $box[boxIndex[2]].style.cssText = 'left:' + elLeftArr[1] + 'px;transform:scale(1);opacity:0.7'
+  $box[boxIndex[0]].style.cssText = 'left:' + elLeftArr[0] + 'px;transform:scale(1);opacity:0'
+  $box[boxIndex[1]].style.cssText = 'left:' + elLeftArr[1] + 'px;transform:scale(1.3);opacity:1'
+  $box[boxIndex[2]].style.cssText = 'left:' + elLeftArr[2] + 'px;transform:scale(1);opacity:0.7'
 }
 function sortBoxR () {
-  $box[boxIndex[0]].style.cssText = 'left:' + elLeftArr[0] + 'px;transform:scale(1.3);opacity:1'
-  $box[boxIndex[1]].style.cssText = 'left:' + elLeftArr[1] + 'px;transform:scale(1);opacity:0.7'
-  $box[boxIndex[2]].style.cssText = 'left:' + document.body.clientWidth + 'px;transform:scale(1);opacity:0'
+  $box[boxIndex[0]].style.cssText = 'left:' + elLeftArr[1] + 'px;transform:scale(1.3);opacity:1'
+  $box[boxIndex[1]].style.cssText = 'left:' + elLeftArr[2] + 'px;transform:scale(1);opacity:0.7'
+  $box[boxIndex[2]].style.cssText = 'left:' + elLeftArr[3] + 'px;transform:scale(1);opacity:0'
 }
