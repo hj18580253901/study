@@ -9,7 +9,7 @@
       <router-link to='/account' class="inline-block nav-link">我的账户</router-link>
       <router-link to='/download' class="inline-block nav-link">软件下载</router-link>
     </div>
-    <div class="abs out">退出</div>
+    <div class="abs out" @click='handler' v-if='$route.path !== "/login" && $route.path !== "/register"'>退出</div>
   </div>
   </div>
 </template>
@@ -17,7 +17,13 @@
 <script>
 
 export default {
-  name: 'TopBar'
+  name: 'TopBar',
+  methods: {
+    handler: function () {
+      console.log(this.$route.path)
+      this.$router.replace('/login')
+    }
+  }
 }
 </script>
 

@@ -15,7 +15,7 @@
   </div>
 </template>
 <script>
-import {mixin} from '@src/views/share/setMixin'
+import {mixin} from '@src/resource/setMixin.js'
 export default {
   name: 'TopSearch',
   mixins: [mixin],

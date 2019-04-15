@@ -1,13 +1,9 @@
 import {api} from '@/reourse/setAxios'
 import {getInfoByToken} from '@/reourse/api'
-const codeReg = /^\d{6}$/
 const mobileReg = /^[1][3,4,5,7,8][0-9]{9}$/
 const passReg = /^\S{6,18}$/
 export var mixin = {
   methods: {
-    testCode (code) {
-      return codeReg.test(code)
-    },
     commitUserInfo (res) {
       this.$store.commit('SET_LOGIN', res)
     },
@@ -49,6 +45,7 @@ export var mixin = {
         api.get(`user/wechat/verifycode?mobile=${mobile}&type=${type}&captcha=1234&timestamp=${timestamp}`)
           .then(res => {
             this.codeTime(el)
+            this.promptTxt = res.code
           }).catch(err => {
             this.promptTxt = err.message
           })

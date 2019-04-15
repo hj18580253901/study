@@ -51,16 +51,13 @@ export default {
     registerBtn () {
       let mobile = this.regMobile
       let verifyCode = this.regCode
-      console.log(verifyCode)
-      if (mobile && !this.testMobile(mobile) && verifyCode) {
-        console.log(1)
-        let params = `mobile=${mobile}&verify_code=${verifyCode}`
-        api.post('user/wechat/register', params)
-          .then(res => {
-            this.promptTxt = '注册成功 前往登录页登录'
-          }).catch(err => {
-            this.promptTxt = err.message
-          })
+      if (mobile && this.testMobile(mobile) && verifyCode) {
+        let params = `mobile=${mobile}&verify_code=${verifyCode}&sourceMobile=17700000020&staffNo=pc_formal`
+        api.post('user/wechat/register', params).then(res => {
+          this.promptTxt = '注册成功 前往登录页登录'
+        }).catch(err => {
+          this.promptTxt = err.message
+        })
       } else {
         this.promptTxt = '请输入正确的手机号或验证码'
       }

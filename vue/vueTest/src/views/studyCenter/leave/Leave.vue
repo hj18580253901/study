@@ -2,7 +2,7 @@
   <div class="leave-manage">
     <p class="title">请假管理</p>
     <div class="take-leave">
-      <router-link to='leave/leave-manage' class="leaveBtn inline-block">申请请假</router-link>
+      <router-link to='/study-center/leave/leave-manage' class="leaveBtn inline-block">申请请假</router-link>
     </div>
     <div class="leave-record">
       <ul class="clearfix" v-if="leaveData.length > 0">

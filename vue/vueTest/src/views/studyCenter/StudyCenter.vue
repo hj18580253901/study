@@ -17,13 +17,13 @@
         </div>
       </div>
       <div class="router-link-box">
-        <router-link to="course" class="my-course">
+        <router-link to="/study-center/course" class="my-course">
           <span class="course-ico">
           </span>
           <span class="course-tit">我的课程</span>
         </router-link>
-        <router-link to='leave' class="leave-mana"><span class="leave-ico"></span><span class="leave-tit">请假管理</span></router-link>
-        <router-link to='testLevel' class="level-test"><span class="level-ico"></span><span class="test-tit">水平测试</span></router-link>
+        <router-link to='/study-center/leave' class="leave-mana"><span class="leave-ico"></span><span class="leave-tit">请假管理</span></router-link>
+        <router-link to='/study-center/testLevel' class="level-test"><span class="level-ico"></span><span class="test-tit">水平测试</span></router-link>
       </div>
     </div>
     <div class="right-wrapper abs"><router-view></router-view></div>

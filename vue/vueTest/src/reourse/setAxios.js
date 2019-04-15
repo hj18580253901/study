@@ -6,9 +6,9 @@ function getAxios (settings, timeout = 10000) {
     if (res.status >= 200 && res.status < 300 && !res.data.code) {
       return res.data.data || res.data
     }
-    return Promise.reject(res.data)
+    return Promise.reject(res.data || res.data.data)
   }, err => {
-    return Promise.reject(err.data || err.response.data || {
+    return Promise.reject(err.data || (err.response && err.response.data) || {
       code: 5001,
       message: 'api error'
     })
@@ -16,7 +16,7 @@ function getAxios (settings, timeout = 10000) {
   return instance
 }
 export const api = getAxios({
-  baseURL: ('https:wechat-api-dev.rouchi.com/').replace(/\/$/, ''),
+  baseURL: ('http://localhost:3000').replace(/\/$/, ''),
   'Content-Type': 'application/x-www-form-urlencoded',
   'Accept': 'application/json'
 })

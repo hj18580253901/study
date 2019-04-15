@@ -39,7 +39,7 @@ export default new Router({
       component: StudyCenter,
       children: [
         {path: '', redirect: 'course'},
-        { path: 'course', component: Course },
+        {path: 'course', component: Course},
         {path: 'course/:classroomId', component: CourseDetail},
         { path: 'leave', component: Leave },
         {path: 'leave/leave-manage', component: LeaveManage},
