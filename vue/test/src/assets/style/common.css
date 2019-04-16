@@ -1,6 +1,9 @@
-html{
+html,body{
 	font-family: "Helvetica Neue", Helvetica, STHeiTi, "Microsoft Yahei", Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
+	-webkit-font-smoothing: antialiased;
+	overflow:auto;
+	height:100%;
+	margin:0;
 }
 .clearfix:after{
   content: '.';
