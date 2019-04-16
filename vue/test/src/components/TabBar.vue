@@ -1,6 +1,6 @@
 <template>
   <div class="tabbar_box">
-    <div class="tabBarMain">    
+    <div class="tabBarMain">  
       <router-link class="item" to="/index"><i class="iconfont icon-shouye1"></i><span>首页</span></router-link>
       <router-link class="item" to="/vicinity"><i class="iconfont icon-fujinhui"></i> <span>附近</span></router-link>
       <router-link class="item" to="/find"><i class="iconfont icon-n5appqz"></i><span>发现</span></router-link>
