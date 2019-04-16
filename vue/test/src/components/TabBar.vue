@@ -48,7 +48,7 @@ export default {
     .is-active{
       .iconfont{
         color:#0bb4b7!important;
-        bavkground:#0bb4b7;
+        background:#0bb4b7;
       }
       span{
         color:#0bb4b7!important;
